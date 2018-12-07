@@ -1,0 +1,903 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description"><meta name="keyword"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>HTML5 入门详解</title><link rel="shortcut icon" href="/images/avatar.jpg" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><body></body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="/images/avatar.jpg"></div><div class="author"><div class="author-name"><a href="/">Ryan's Blog</a></div><div class="about-me">大家好，我叫李新华。我的域名是“李新华真帅”。</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/"><i class="fa fa-fw fa-home"> </i><br>首页</a></li><li><a href="/"><i class="fa fa-fw fa-book"> </i><br>博客</a></li><li><a href="/archives"><i class="fa fa-fw fa-archive"> </i><br>归档</a></li><li><a href="/categories"><i class="fa fa-fw fa-th"> </i><br>分类</a></li><li><a href="/tags"><i class="fa fa-fw fa-tags"> </i><br>标签</a></li><li><a href="/life"><i class="fa fa-fw fa-heart"> </i><br>生活</a></li><li><a href="/about"><i class="fa fa-fw fa-user"> </i><br>关于</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="/images/avatar.jpg"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/gary-Shen"></span><a href="https://github.com/gary-Shen" target="_blank" title="https://github.com/gary-Shen">https://github.com/gary-Shen</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="guanlinshen@126.com"></span><span>guanlinshen@126.com</span></li><li class="social-item"><span class="label"><img src="/images/socials/wechat.svg" alt="Grinson"></span><span>Grinson</span></li></ul></div></div></div></header><div class="container post"><section class="article"><div class="title">HTML5 入门详解</div><div class="date">写于2018年10月15日</div><div class="content"><p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxgnw4hajoj31400p0q4d.jpg" alt="image"></p>
+<a id="more"></a>
+<h2 id="1-认识html5"><a class="header-anchor" href="#1-认识html5"></a>1. 认识HTML5</h2>
+<blockquote>
+<p><code>HTML5</code>并不仅仅只是作为<code>HTML</code>标记语言的一个最新版本，更重要的是它制定了<code>Web</code>应用开发的一系列标准，成为第一个将<code>Web</code>做为应用开发平台的<code>HTML</code>语言。</p>
+</blockquote>
+<p><code>HTML5</code>定义了一系列新元素，如新语义标签、智能表单、多媒体标签等，可以帮助开发者创建富互联网应用，还提供了一系列<code>Javascript API</code>，如地理定位、重力感应、硬件访问等，可以在浏览器内实现类原生应用，甚至结合<code>Canvas</code>我们可开发网页版游戏，同时结合<code>CSS3</code>的过渡、转换、动画等特性，可以极大的增强用户体验，提升开发功能的可应用性。</p>
+<p><em>我们日常讨论的<code>H5</code>其实是一个泛称，它指的是由<code>HTML5</code> + <code>CSS3</code> + <code>Javascript</code>等技术组合而成的一个应用开发平台。</em></p>
+<h2 id="2-语法规范"><a class="header-anchor" href="#2-语法规范"></a>2. 语法规范</h2>
+<blockquote>
+<p>随着<code>Web</code>技术的更新，<code>HTML</code>也先后经历了<code>HTML4.01</code>、<code>XHTML1.0</code>、<code>HTML5</code>几个重要的版本，在版本的演变过程中新增或废弃了一些属性，同时对语法规范也做了一些调整，为了能够保证浏览器可以兼容不同版本语法规范的，我们可以使用<code>&lt;!DOCTYPE&gt;</code>指示浏览器应该如何处理我们的<code>HTML</code>。</p>
+</blockquote>
+<p><strong>常用的DOCTYPE声明：</strong></p>
+<p><strong>1、HTML5</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>2、HTML 4.01 Strict</strong></p>
+<blockquote>
+<p>4.01的严格版本，该<code>DTD</code>包含所有<code>HTML</code>元素和属性，但不包括展示性的和弃用的元素（比如<code>font</code>）。<code>不允许</code>框架集（<code>Framesets</code>）。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>3、HTML 4.01 Transitional</strong></p>
+<blockquote>
+<p>该<code>DTD</code>包含所有<code>HTML</code>元素和属性，包括展示性的和弃用的元素（比如<code>font</code>）。不允许框架集（<code>Framesets</code>）。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>4、HTML 4.01 Frameset</strong></p>
+<blockquote>
+<p>该<code>DTD</code>等同于<code>HTML 4.01 Transitional</code>，但允许框架集内容。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Frameset//EN" "http://www.w3.org/TR/html4/frameset.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>5、XHTML 1.0 Strict</strong></p>
+<blockquote>
+<p>该<code>DTD</code>包含所有<code>HTML</code>元素和属性，但不包括展示性的和弃用的元素（比如<code>font</code>）。不允许框架集（<code>Framesets</code>）。必须以格式正确的<code>XML</code>来编写标记。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" </span></span><br><span class="line"><span class="meta">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>6、XHTML 1.0 Transitional</strong></p>
+<blockquote>
+<p>该<code>DTD</code>包含所有<code>HTML</code>元素和属性，包括展示性的和弃用的元素（比如<code>font</code>）。不允许框架集（<code>Framesets</code>）。必须以格式正确的<code>XML</code>来编写标记。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "</span></span><br><span class="line"><span class="meta">http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>7、XHTML 1.0 Frameset</strong></p>
+<blockquote>
+<p>该<code>DTD</code>等同于<code>XHTML 1.0 Transitional</code>，但允许框架集内容。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN" </span></span><br><span class="line"><span class="meta">"http://www.w3.org/TR/xhtml1/DTD/xhtml1-frameset.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>8、XHTML 1.1</strong></p>
+<blockquote>
+<p>该<code>DTD</code>等同于<code>XHTML 1.0 Strict</code>，但允许添加模型（例如提供对东亚语系的<code>ruby</code>支持）。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd"&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-语义化标签"><a class="header-anchor" href="#3-语义化标签"></a>3. 语义化标签</h2>
+<blockquote>
+<p><code>HTML5</code>提供了新的元素来创建更好的页面结构：</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>标签</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;article&gt;</code></td>
+<td>定义页面独立的内容区域（文章）。</td>
+</tr>
+<tr>
+<td><code>&lt;aside&gt;</code></td>
+<td>定义页面的侧边栏内容（侧边栏）。</td>
+</tr>
+<tr>
+<td><code>&lt;bdi&gt;</code></td>
+<td>允许您设置一段文本，使其脱离其父元素的文本方向设置。</td>
+</tr>
+<tr>
+<td><code>&lt;command&gt;</code></td>
+<td>定义命令按钮，比如单选按钮、复选框或按钮</td>
+</tr>
+<tr>
+<td><code>&lt;details&gt;</code></td>
+<td>用于描述文档或文档某个部分的细节</td>
+</tr>
+<tr>
+<td><code>&lt;dialog&gt;</code></td>
+<td>定义对话框，比如提示框</td>
+</tr>
+<tr>
+<td><code>&lt;summary&gt;</code></td>
+<td>标签包含<code>details</code>元素的标题</td>
+</tr>
+<tr>
+<td><code>&lt;figure&gt;</code></td>
+<td>规定独立的流内容（图像、图表、照片、代码等等）。</td>
+</tr>
+<tr>
+<td><code>&lt;figcaption&gt;</code></td>
+<td>定义<code>&lt;figure&gt;</code>元素的标题</td>
+</tr>
+<tr>
+<td><code>&lt;footer&gt;</code></td>
+<td>定义<code>section</code>或<code>document</code>的页脚。</td>
+</tr>
+<tr>
+<td><code>&lt;header&gt;</code></td>
+<td>定义了文档的头部区域</td>
+</tr>
+<tr>
+<td><code>&lt;mark&gt;</code></td>
+<td>定义带有记号的文本。</td>
+</tr>
+<tr>
+<td><code>&lt;meter&gt;</code></td>
+<td>定义度量衡。仅用于已知最大和最小值的度量。</td>
+</tr>
+<tr>
+<td><code>&lt;nav&gt;</code></td>
+<td>定义导航链接的部分。</td>
+</tr>
+<tr>
+<td><code>&lt;progress&gt;</code></td>
+<td>定义任何类型的任务的进度。</td>
+</tr>
+<tr>
+<td><code>&lt;ruby&gt;</code></td>
+<td>定义<code>ruby</code>注释（中文注音或字符）。</td>
+</tr>
+<tr>
+<td><code>&lt;rt&gt;</code></td>
+<td>定义字符（中文注音或字符）的解释或发音。</td>
+</tr>
+<tr>
+<td><code>&lt;rp&gt;</code></td>
+<td>在<code>ruby</code>注释中使用，定义不支持<code>ruby</code>元素的浏览器所显示的内容。</td>
+</tr>
+<tr>
+<td><code>&lt;section&gt;</code></td>
+<td>定义文档中的节（<code>section</code>、区段）。</td>
+</tr>
+<tr>
+<td><code>&lt;time&gt;</code></td>
+<td>定义日期或时间。</td>
+</tr>
+<tr>
+<td><code>&lt;wbr&gt;</code></td>
+<td>规定在文本中的何处适合添加换行符。</td>
+</tr>
+</tbody>
+</table>
+<p>本质上新语义标签与<code>&lt;div&gt;</code>、<code>&lt;span&gt;</code>没有区别，只是其具有语义性，使用时除了在<code>HTML</code>结构上需要注意外，其它和普通标签的使用无任何差别，可以理解成<code>&lt;div class=&quot;nav&quot;&gt;</code>相当于<code>&lt;nav&gt;</code>。不要好奇，它只是一个标签！</p>
+<p><em>尽量避免全局使用<code>header</code>、<code>footer</code>、<code>aside</code>等语义标签。</em></p>
+<h2 id="4-html5-浏览器支持"><a class="header-anchor" href="#4-html5-浏览器支持"></a>4. HTML5 浏览器支持</h2>
+<blockquote>
+<p>对于目前主流的浏览器来说，都已经支持<code>HTML5</code>了，但是到了<code>Internet Explorer 9</code>，<code>IE</code>才开始支持<code>HTML5</code>，对于之前的旧版本，我们就需要考虑到兼容性问题。</p>
+</blockquote>
+<p><strong>1、将 HTML5 元素定义为块元素</strong></p>
+<blockquote>
+<p><code>HTML5</code> 新增了几个具有语义化的标签，这些标签都是块级元素，在不支持<code>HTML5</code>新标签的浏览器里，会将这些新的标签解析成行内元素(<code>inline</code>)对待，所以我们只需要在初始化的时候将其转换成块元素(<code>block</code>)即可使用。</p>
+</blockquote>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">header</span>, <span class="selector-tag">section</span>, <span class="selector-tag">footer</span>, <span class="selector-tag">aside</span>, <span class="selector-tag">nav</span>, <span class="selector-tag">main</span>, <span class="selector-tag">article</span>, <span class="selector-tag">figure</span> &#123;</span><br><span class="line">    <span class="attribute">display</span>: block; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>2、通过 js 动态创建标签</strong></p>
+<blockquote>
+<p>在<code>IE9</code>版本以下，并不能正常解析这些新标签，但是却可以识别通过<code>document.createElement('tagName')</code>创建的自定义标签，于是我们的解决方案就是将<code>HTML5</code>的新标签全部通过<code>document.createElement('tagName')</code>来创建一遍，这样<code>IE</code>低版本也能正常解析<code>HTML5</code>新标签了。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">    header,section,nav...&#123;</span></span><br><span class="line"><span class="css">        <span class="selector-tag">display</span><span class="selector-pseudo">:block</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"> 	 <span class="built_in">document</span>.createElement(<span class="string">"header"</span>);</span></span><br><span class="line"><span class="javascript"> 	 <span class="built_in">document</span>.createElement(<span class="string">"section"</span>);</span></span><br><span class="line"><span class="javascript"> 	 <span class="built_in">document</span>.createElement(<span class="string">"nav"</span>);</span></span><br><span class="line"><span class="undefined"> 	            .</span></span><br><span class="line"><span class="undefined"> 	            .</span></span><br><span class="line"><span class="undefined"> 	            .</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>注意：通过<code>document.createElement</code>创建出来的标签时行内元素，所以同样的需要将它们转换成块级元素。</em></p>
+<p><strong>3、Shiv 解决方案</strong></p>
+<blockquote>
+<p>在实际开发中我们更多采用的是通过检测<code>IE</code>浏览器的版本来加载第三方的一个<code>JS</code>库来解决兼容问题，这个库文件会帮自动通过<code>document.createElement('tagName')</code>创建所有<code>HTML5</code>的新标签。针对<code>IE</code>浏览器<code>html5shiv</code>是比较好的解决方案。<code>html5shiv</code>主要解决<code>HTML5</code>提出的新的元素不被<code>IE6-8</code>识别，这些新元素不能作为父节点包裹子元素，并且不能应用<code>CSS</code>样式的问题。</p>
+</blockquote>
+<p><strong>引入本地html5shiv.min.js文件：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></span><br><span class="line"><span class="comment">	 &lt;script type="text/javascript" src="html5shiv.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<p><code>lte</code>：表示小于等于；当浏览器版本小于等于<code>IE8</code>的时候，引用<code>html5shiv.min.js</code>文件。</p>
+<p><strong>引入远程静态资源库：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></span><br><span class="line"><span class="comment">  &lt;script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>以上的注释代码只有在IE浏览器下次才会识别里面的内容，其他浏览器直接当注释识别。</em></p>
+<p><strong>完整示例代码：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"utf-8"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">title</span>&gt;</span>兼容性处理<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--[if lte IE 8]&gt;</span></span><br><span class="line"><span class="comment">  &lt;script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="comment">&lt;![endif]--&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">h1</span>&gt;</span>我正在处理兼容性<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;<span class="name">article</span>&gt;</span>我在IE下也能显示<span class="tag">&lt;/<span class="name">article</span>&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>注意：<code>html5shiv.js</code>引用代码必须放在<code>&lt;head&gt;</code>元素中，因为<code>IE</code>浏览器在解析<code>HTML5</code>新元素时需要先加载该文件。</em></p>
+<h2 id="5-表单"><a class="header-anchor" href="#5-表单"></a>5. 表单</h2>
+<blockquote>
+<p>伴随着互联网富应用以及移动开发的兴起，传统的<code>Web</code>表单已经越来越不能满足开发的需求，所以<code>HTML5</code>在<code>Web</code>表单方向也做了很大的改进，如拾色器、日期/时间组件等，使表单处理变的更加高效。</p>
+</blockquote>
+<h3 id="5-1-表单控件"><a class="header-anchor" href="#5-1-表单控件"></a>5.1 表单控件</h3>
+<blockquote>
+<p><code>html5</code>中新增的一些表单控件，例如<code>email</code>属性的输入框，它可以检测你的输入内容是否符合一个邮箱的格式，自动进行表单校验。</p>
+</blockquote>
+<p><strong>1、表单域：form</strong></p>
+<blockquote>
+<p>我们都知道<code>&lt;form&gt;</code>标签用于为用户输入创建<code>HTML</code>表单。表单能够包含<code>input</code>元素，比如文本字段、复选框、单选框、提交按钮等等。表单还可以包含<code>menus</code>、<code>textarea</code>、<code>fieldset</code>、<code>legend</code>和<code>label</code>元素。</p>
+</blockquote>
+<p><em>表单用于向服务器传输数据。</em></p>
+<p>在<code>html5</code>中<code>&lt;form&gt;</code>表单域添加了两个新的属性：&quot;<code>autocomplete: no/yes</code>&quot;、&quot;<code>novalidate</code>&quot;：</p>
+<ul>
+<li>
+<p><code>autocomplete</code>：规定是否启用表单的自动完成功能，默认<code>on</code>。（<em>自动完成允许浏览器预测对字段的输入。当用户在字段开始键入时，浏览器基于之前键入过的值，应该显示出在字段中填写的选项。</em>）。</p>
+</li>
+<li>
+<p><code>novalidate</code>：如果使用该属性，则提交表单时不进行验证（关闭控件自动校验功能）。</p>
+</li>
+</ul>
+<p><strong>2、邮箱：email</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"email"</span> <span class="attr">name</span>=<span class="string">"email"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47gpivj20a4028dfo.jpg" alt="image"></p>
+<p><strong>3、网址：url</strong></p>
+<blockquote>
+<p>协议、域名都要输入进去（<code>https://www.baidu.com</code>，如果直接<code>www.baidu.com</code>会提示输入错误的），否则触发表单校验。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    网址：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"url"</span> <span class="attr">name</span>=<span class="string">"url"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47iw7yj207002d743.jpg" alt="image"></p>
+<p><strong>4、数字：number</strong></p>
+<blockquote>
+<p>输入表单数<code>number</code>属性的时候，在表单尾部会有一个上下的箭头，用来选择数字。另外表单里的<code>step</code>属性表示：点击的时候每一次增加或减少的步数；<code>max</code>属性表示：增加到的最大范围，<code>min</code>属性表示减小到的最小范围。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    年龄：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"number"</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">step</span>=<span class="string">"3"</span> <span class="attr">max</span>=<span class="string">"120"</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47gemlj206z017gld.jpg" alt="image"></p>
+<p><strong>5、电话号码：tel</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     电话号码： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"tel"</span> <span class="attr">name</span>=<span class="string">"tel"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>6、颜色：color</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    邮箱：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"color"</span> <span class="attr">name</span>=<span class="string">"color"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47gysvj20hw0bojro.jpg" alt="image"></p>
+<p><strong>7、时间：time</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     时间：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"time"</span> <span class="attr">name</span>=<span class="string">"time"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47ijvuj205s016a9t.jpg" alt="image"></p>
+<p><strong>8、日期：date</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     日期： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"date"</span> <span class="attr">name</span>=<span class="string">"date"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47fpf9j209t066glk.jpg" alt="image"></p>
+<p><strong>9、时间日期：datetime</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     时间日期： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"datetime"</span> <span class="attr">name</span>=<span class="string">"datetime"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>10、周：week</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     周： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"week"</span> <span class="attr">name</span>=<span class="string">"week"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47jppaj20a7063t8o.jpg" alt="image"></p>
+<p><strong>11、月：month</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">     月： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"month"</span> <span class="attr">name</span>=<span class="string">"month"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47gotfj208x069t8n.jpg" alt="image"></p>
+<p><strong>12、滑块：range</strong></p>
+<blockquote>
+<p><code>max</code>：规定允许的最大值，<code>min</code>：规定允许的最小值。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span>&gt;</span></span><br><span class="line">    滑块： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"range"</span> <span class="attr">name</span>=<span class="string">"range"</span> <span class="attr">min</span>=<span class="string">"1"</span> <span class="attr">max</span>=<span class="string">"20"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpej47gotgj206a01m0rv.jpg" alt="image"></p>
+<h3 id="5-2-表单元素"><a class="header-anchor" href="#5-2-表单元素"></a>5.2 表单元素</h3>
+<blockquote>
+<p>不是所有浏览器都支持<code>HTML5</code>新的表单元素的，但是不影响使用，即使不支持仍然可以显示常规的表单。</p>
+</blockquote>
+<p><strong>1、datalist</strong></p>
+<blockquote>
+<p>在<code>Web</code>设计中,经常会用到如输入框的自动下拉提示,这将大大方便用户的输入。在以前，如果要实现这样的功能，必须要求开发者使用一些<code>Javascript</code>的技巧或相关的框架进行<code>ajax</code>调用，需要一定的编程工作量。但随着<code>HTML5</code>的慢慢普及，开发者可以使用其中的新的<code>DataList</code>标记就能快速开发出十分漂亮的<code>AutoComplete</code>组件的效果。</p>
+</blockquote>
+<p><code>datalist</code>有点类似于<code>select</code>下拉菜单，<code>datalist</code>元素规定输入域的选项列表。列表是通过<code>datalist</code>内的 <code>option</code>元素创建的。如需把<code>datalist</code>绑定到输入域，请用输入域的<code>list</code>属性引用<code>datalist</code>的<code>id</code>：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span></span><br><span class="line">    浏览器版本：<span class="tag">&lt;<span class="name">input</span> <span class="attr">list</span>=<span class="string">"words"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">datalist</span> <span class="attr">id</span>=<span class="string">"words"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Internet Explorer"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Firefox"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Chrome"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Opera"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Safari"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Sogou"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">option</span> <span class="attr">value</span>=<span class="string">"Maxthon"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">datalist</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果图：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpem55axuzg208t05gaa4.gif" alt="image"></p>
+<h3 id="5-3-表单属性"><a class="header-anchor" href="#5-3-表单属性"></a>5.3 表单属性</h3>
+<blockquote>
+<p>在<code>HTML5</code>中， <code>&lt;form&gt;</code>和<code>&lt;input&gt;</code>标签添加了几个新属性。其中<code>&lt;form&gt;</code>标签的<code>autocomplete</code>、<code>novalidate</code>属性，我们在上面都讲过了，现在我们来看看<code>&lt;input&gt;</code>提供了哪些新的属性。</p>
+</blockquote>
+<p><strong>1、autocomplete 自动完成</strong></p>
+<blockquote>
+<p><code>autocomplete</code>属性规定<code>form</code>或<code>input</code>域应该拥有自动完成功能。当用户在自动完成域中开始输入时，浏览器应该在该域中显示填写的选项。</p>
+</blockquote>
+<p><strong>提示：</strong><code>autocomplete</code>属性有可能在<code>form</code>元素中默认是开启的，而在<code>input</code>元素中是关闭的。需要手动添加&quot;<code>on</code>&quot;。</p>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">autocomplete</span>=<span class="string">"on"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>2、placeholder 占位符</strong></p>
+<blockquote>
+<p><code>placeholder</code>属性提供一种提示（<code>hint</code>），描述输入域所期待的值。简短的提示在用户输入值前会显示在输入域上。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">placeholder</span>=<span class="string">"请输入用户名"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpen4pjsafj207q00umwx.jpg" alt="image"></p>
+<p><strong>3、autofocus 自动获得焦点</strong></p>
+<blockquote>
+<p><code>autofocus</code>属性是一个<code>boolean</code>属性。<code>autofocus</code>属性规定在页面加载时，域自动地获得焦点。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">autofocus</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>4、multiple 多文件上传</strong></p>
+<blockquote>
+<p><code>multiple</code>属性是一个<code>boolean</code>属性。<code>multiple</code>属性规定<code>&lt;input&gt;</code>元素中可选择多个值。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span>&gt;</span></span><br><span class="line">  选择图片: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">name</span>=<span class="string">"img"</span> <span class="attr">multiple</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>此时上传文件时就可以同时上传多个文件了。</em></p>
+<p><strong>5、form 绑定输入域</strong></p>
+<blockquote>
+<p>当一个输入表单<code>input</code>，不在一个表单域<code>form</code>中的时候。通过<code>form</code>属性和表单域的<code>id</code>可以将输入表单绑定到表单域中。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">"xxx.php"</span> <span class="attr">id</span>=<span class="string">"form1"</span>&gt;</span></span><br><span class="line">    用户名: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span> <span class="attr">value</span>=<span class="string">"提交"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line">    密码: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"pwd"</span> <span class="attr">form</span>=<span class="string">"form1"</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><em>点击提交按钮，表单域外部的“密码”输入框内容也会提交。</em></p>
+<p><strong>6、required 必填项</strong></p>
+<blockquote>
+<p><code>required</code>属性是一个<code>boolean</code>属性。<code>required</code>属性规定必须在提交之前填写输入域（不能为空）。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用户名: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"usrname"</span> <span class="attr">required</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>7、pattern 自定义验证</strong></p>
+<blockquote>
+<p><code>pattern</code>属性描述了自定义一个正则表达式用于验证<code>&lt;input&gt;</code>元素的值。</p>
+</blockquote>
+<p>示例代码：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    用户名: <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">pattern</span>=<span class="string">"[A-Za-z]&#123;3&#125;"</span> <span class="attr">title</span>=<span class="string">"三位英文字母"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>效果图：</p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpeo2q76vjj208d02w0sm.jpg" alt="image"></p>
+<h3 id="5-4-表单事件"><a class="header-anchor" href="#5-4-表单事件"></a>5.4 表单事件</h3>
+<blockquote>
+<p>这里给大家介绍两个表单事件<code>oninput</code>：用户输入的时候触发的事件；<code>oninvalid</code>：表单验证无法通过时候触发的事件</p>
+</blockquote>
+<p><strong>示例代码：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">form</span> <span class="attr">action</span>=<span class="string">""</span>&gt;</span></span><br><span class="line">    用户名：<span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"username"</span> <span class="attr">id</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 限定密码格式只能是数字 --&gt;</span></span><br><span class="line">    密 码： <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"text"</span> <span class="attr">name</span>=<span class="string">"pwd"</span> <span class="attr">id</span>=<span class="string">"pwd"</span> <span class="attr">pattern</span>=<span class="string">"\d+"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"submit"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">form</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> user = <span class="built_in">document</span>.getElementById(<span class="string">'user'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> pwd = <span class="built_in">document</span>.getElementById(<span class="string">'pwd'</span>);</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">// 用户输入的时候触发</span></span></span><br><span class="line"><span class="javascript">    user.oninput = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="undefined">        alert(1);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="javascript">    <span class="comment">// 验证无法通过的时候触发</span></span></span><br><span class="line"><span class="javascript">    pwd.oninvalid = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="undefined">        alert(2);</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果图：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpeouepfkgg20h206xt9h.gif" alt="image"></p>
+<p><strong>当验证无法通过的时候，可以通过<code>setCustomValidity</code>方法添加或修改提示内容：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pwd.oninvalid = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">this</span>.setCustomValidity(<span class="string">"密码格式错误"</span>); </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>效果图：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpeoyljuocj205702j3yb.jpg" alt="image"></p>
+<h3 id="5-5-表单样式"><a class="header-anchor" href="#5-5-表单样式"></a>5.5 表单样式</h3>
+<blockquote>
+<p>这里主要是说下如何修改<code>placeholder</code>的默认样式。</p>
+</blockquote>
+<ul>
+<li>
+<p>火狐： <code>input::-moz-placeholder{}</code></p>
+</li>
+<li>
+<p>谷歌： <code>input::-webkit-input-placeholder {}</code></p>
+</li>
+</ul>
+<p><em>通过双伪元素选择器，即可改变<code>placeholder</code>文字的样式。</em></p>
+<h2 id="6-多媒体标签"><a class="header-anchor" href="#6-多媒体标签"></a>6. 多媒体标签</h2>
+<blockquote>
+<p>在<code>HTML5</code>之前，在网页上播放音频/视频的通用方法是利用<code>Flash</code>来播放，但是大多情况下，并非所有用户的浏览器都安装了<code>Flash</code>插件，由此使得处理音频/视频播放变的非常复杂，并且移动设备的浏览器并不支持<code>Flash</code>插件。</p>
+</blockquote>
+<h3 id="6-1-音频"><a class="header-anchor" href="#6-1-音频"></a>6.1 音频</h3>
+<blockquote>
+<p><code>HTML5</code>通过<code>&lt;audio&gt;</code>标签来解决音频播放的问题。</p>
+</blockquote>
+<p><strong>示例代码：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 通过src指定音频文件路径即可 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"./xxx.mp3"</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>播放格式</strong></p>
+<blockquote>
+<p>由于版权等原因，不同的浏览器可支持播放的格式是不一样的，如下图供参考：</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpeq7i03ulj20k1044glk.jpg" alt="image"></p>
+<p><strong>处理兼容性</strong></p>
+<blockquote>
+<p>在<code>&lt;audio&gt;</code>与<code>&lt;/audio&gt;</code>之间你需要插入浏览器不支持的<code>&lt;audio&gt;</code>元素的提示文本 。<code>&lt;audio&gt;</code>元素允许使用多个 <code>&lt;source&gt;</code>元素。<code>&lt;source&gt;</code> 元素可以链接不同的音频文件，浏览器将使用第一个支持的音频文件。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">audio</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 通过source标签指定多格式音频文件 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"xxx.ogg"</span> <span class="attr">type</span>=<span class="string">"audio/ogg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"xxx.mp3"</span> <span class="attr">type</span>=<span class="string">"audio/mpeg"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"xxx.wav"</span> <span class="attr">type</span>=<span class="string">"audio/wav"</span>&gt;</span></span><br><span class="line">    您的浏览器不支持 audio 元素。</span><br><span class="line"><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>音频控制属性</strong></p>
+<blockquote>
+<p>通过附加属性可以更友好控制音频的播放.</p>
+</blockquote>
+<ul>
+<li>
+<p><code>autoplay</code> 自动播放</p>
+</li>
+<li>
+<p><code>controls</code> 是否显示控制条</p>
+</li>
+<li>
+<p><code>loop</code> 循环播放</p>
+</li>
+</ul>
+<h3 id="6-2-视频"><a class="header-anchor" href="#6-2-视频"></a>6.2 视频</h3>
+<blockquote>
+<p><code>HTML5</code>通过<code>&lt;video&gt;</code>标签来解决音频播放的问题。</p>
+</blockquote>
+<p><strong>示例代码：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 通过src指定视频文件路径即可 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">audio</span> <span class="attr">src</span>=<span class="string">"./xxx.mp4"</span>&gt;</span><span class="tag">&lt;/<span class="name">audio</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>播放格式</strong></p>
+<blockquote>
+<p>由于版权等原因，不同的浏览器可支持播放的格式是不一样的，如下图供参考:</p>
+</blockquote>
+<p><img src="http://ww1.sinaimg.cn/large/9c47d583gy1fpeqv5sf43j20k8045gll.jpg" alt="image"></p>
+<p><strong>处理兼容性</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">video</span> <span class="attr">width</span>=<span class="string">"320"</span> <span class="attr">height</span>=<span class="string">"240"</span> <span class="attr">controls</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"xxx.mp4"</span> <span class="attr">type</span>=<span class="string">"video/mp4"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">source</span> <span class="attr">src</span>=<span class="string">"xxx.ogg"</span> <span class="attr">type</span>=<span class="string">"video/ogg"</span>&gt;</span></span><br><span class="line">    您的浏览器不支持Video标签。</span><br><span class="line"><span class="tag">&lt;/<span class="name">video</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="6-3-音频-视频方法"><a class="header-anchor" href="#6-3-音频-视频方法"></a>6.3 音频/视频方法</h3>
+<blockquote>
+<p>通过附加属性可以更加友好的控制音频、视频的播放。</p>
+</blockquote>
+<p><strong>1、autoplay 自动播放</strong></p>
+<blockquote>
+<p><code>autoplay</code>属性设置或返回音视频是否在加载后即开始播放。</p>
+</blockquote>
+<p>设置<code>autoplay</code>属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">audio|video.autoplay=<span class="literal">true</span>|<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>返回<code>autoplay</code>属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">audio|video.autoplay</span><br></pre></td></tr></table></figure>
+<p>启用自动播放，并重载视频：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> video=<span class="built_in">document</span>.getElementById(<span class="string">"video1"</span>);</span><br><span class="line">video.autoplay = <span class="literal">true</span>;</span><br><span class="line">video.load();</span><br></pre></td></tr></table></figure>
+<p><strong>2、buffered 已缓冲部分</strong></p>
+<blockquote>
+<p><code>buffered</code>属性返回<code>TimeRanges</code>对象。<code>TimeRanges</code>对象表示用户的音视频缓冲范围。缓冲范围指的是已缓冲音视频的时间范围。如果用户在音视频中跳跃播放，会得到多个缓冲范围。</p>
+</blockquote>
+<p><strong>返回值：</strong></p>
+<blockquote>
+<p><code>TimeRanges</code>对象，表示音视频的已缓冲部分。</p>
+</blockquote>
+<p><code>TimeRanges</code>对象属性：</p>
+<ul>
+<li>
+<p><code>length</code> - 获得音视频中已缓冲范围的数量</p>
+</li>
+<li>
+<p><code>start(index)</code> - 获得某个已缓冲范围的开始位置</p>
+</li>
+<li>
+<p><code>end(index)</code> - 获得某个已缓冲范围的结束位置</p>
+</li>
+</ul>
+<p><em>注意：首个缓冲范围的下标是<code>0</code>。</em></p>
+<p><strong>示例代码：</strong></p>
+<p>获得视频的第一段缓冲范围（部分），以秒计：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> video = <span class="built_in">document</span>.getElementById(<span class="string">"video1"</span>);</span><br><span class="line">alert(<span class="string">"Start: "</span> + video.buffered.start(<span class="number">0</span>) + <span class="string">" End: "</span> + video.buffered.end(<span class="number">0</span>));</span><br></pre></td></tr></table></figure>
+<p><strong>3、controls 是否显示控制条</strong></p>
+<blockquote>
+<p><code>controls</code>属性设置或返回浏览器应当显示标准的音视频控件。</p>
+</blockquote>
+<p>设置<code>controls</code>属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">audio|video.controls=<span class="literal">true</span>|<span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<p>返回<code>controls</code>属性：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">audio|video.controls</span><br></pre></td></tr></table></figure>
+<p>启用视频控件：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> video = <span class="built_in">document</span>.getElementById(<span class="string">"video1"</span>);</span><br><span class="line">video.controls = <span class="literal">true</span>;</span><br></pre></td></tr></table></figure>
+<p><strong>4、currentSrc 返回当前资源的URL</strong></p>
+<blockquote>
+<p><code>currentSrc</code>熟悉返回当前音频/视频的<code>URL</code>。如果未设置音频/视频，则返回空字符串。</p>
+</blockquote>
+<p>获得当前视频的<code>URL</code>：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">video = <span class="built_in">document</span>.getElementById(<span class="string">"video1"</span>);</span><br><span class="line">alert(video.currentSrc);</span><br></pre></td></tr></table></figure>
+<p><strong>5、currentTime 当前播放位置（时间s）</strong></p>
+<blockquote></blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>autoplay</code></td>
+<td>资源加载完成后自动播放视频或音频</td>
+</tr>
+<tr>
+<td><code>buffered</code></td>
+<td>返回表示音频/视频已缓冲部分的<code>TimeRanges</code>对象</td>
+</tr>
+<tr>
+<td><code>controls</code></td>
+<td>是否显示控制条</td>
+</tr>
+<tr>
+<td><code>currentSrc</code></td>
+<td>返回当前音频/视频的<code>URL</code></td>
+</tr>
+<tr>
+<td><code>currentTime</code></td>
+<td>设置或返回音频/视频中的当前播放位置（以秒计）</td>
+</tr>
+<tr>
+<td><code>defaultMuted</code></td>
+<td>设置或返回音频/视频默认是否静音</td>
+</tr>
+<tr>
+<td><code>defaultPlaybackRate</code></td>
+<td>设置或返回音频/视频的默认播放速度</td>
+</tr>
+<tr>
+<td><code>duration</code></td>
+<td>返回当前音频/视频的长度（以秒计）</td>
+</tr>
+<tr>
+<td><code>ended</code></td>
+<td>返回音频/视频的播放是否已结束</td>
+</tr>
+<tr>
+<td><code>error</code></td>
+<td>返回表示音频/视频错误状态的<code>MediaError</code>对象</td>
+</tr>
+<tr>
+<td><code>loop</code></td>
+<td>设置或返回音频/视频是否应在结束时重新播放</td>
+</tr>
+<tr>
+<td><code>mediaGroup</code></td>
+<td>设置或返回音频/视频所属的组合（用于连接多个音频/视频元素）</td>
+</tr>
+<tr>
+<td><code>muted</code></td>
+<td>设置或返回音频/视频是否静音</td>
+</tr>
+<tr>
+<td><code>networkState</code></td>
+<td>返回音频/视频的当前网络状态</td>
+</tr>
+<tr>
+<td><code>paused</code></td>
+<td>设置或返回音频/视频是否暂停</td>
+</tr>
+<tr>
+<td><code>playbackRate</code></td>
+<td>设置或返回音频/视频播放的速度</td>
+</tr>
+<tr>
+<td><code>played</code></td>
+<td>返回表示音频/视频已播放部分的<code>TimeRanges</code>对象</td>
+</tr>
+<tr>
+<td><code>preload</code></td>
+<td>设置或返回音频/视频是否应该在页面加载后进行加载</td>
+</tr>
+<tr>
+<td><code>readyState</code></td>
+<td>返回音频/视频当前的就绪状态</td>
+</tr>
+<tr>
+<td><code>seekable</code></td>
+<td>返回表示音频/视频可寻址部分的<code>TimeRanges</code>对象</td>
+</tr>
+<tr>
+<td><code>seeking</code></td>
+<td>返回用户是否正在音频/视频中进行查找</td>
+</tr>
+<tr>
+<td><code>src</code></td>
+<td>设置或返回音频/视频元素的当前来源</td>
+</tr>
+<tr>
+<td><code>startDate</code></td>
+<td>返回表示当前时间偏移的<code>Date</code>对象</td>
+</tr>
+<tr>
+<td><code>textTracks</code></td>
+<td>返回表示可用文本轨道的<code>TextTrackList</code>对象</td>
+</tr>
+<tr>
+<td><code>videoTracks</code></td>
+<td>返回表示可用视频轨道的<code>VideoTrackList</code>对象</td>
+</tr>
+<tr>
+<td><code>volume</code></td>
+<td>设置或返回音频/视频的音量</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-dom-扩展"><a class="header-anchor" href="#7-dom-扩展"></a>7. DOM 扩展</h2>
+<h3 id="7-1-获取元素"><a class="header-anchor" href="#7-1-获取元素"></a>7.1 获取元素</h3>
+<blockquote>
+<p><code>html5</code>中新添了两个查找元素的属性，分别是：<code>querySelector</code>，<code>querySelectorAll</code>。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"one"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>文字1<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"two"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>文字2<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line">     <span class="tag">&lt;<span class="name">li</span> <span class="attr">class</span>=<span class="string">"three"</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"#"</span>&gt;</span>文字3<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="comment">//获取元素的方式</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> a= <span class="built_in">document</span>.querySelector(<span class="string">".one a"</span>);</span></span><br><span class="line"><span class="javascript">    a.style.color=<span class="string">"red"</span>;</span></span><br><span class="line"><span class="undefined">    </span></span><br><span class="line"><span class="javascript">    <span class="comment">//通过该方式可以将所有对应的元素选中 返回的是一个伪数组</span></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> a1= <span class="built_in">document</span>.querySelectorAll(<span class="string">"a"</span>);  </span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-2-类名操作"><a class="header-anchor" href="#7-2-类名操作"></a>7.2 类名操作</h3>
+<blockquote>
+<p><code>html5</code>中新添加了一个操作类名的对象：<code>classList</code>。我们可以通过它里面的方法对元素的类进行操作。</p>
+</blockquote>
+<p><strong>1、添加类（<code>add</code>）</strong></p>
+<blockquote>
+<p>添加类的时候，获取到元素之后，通过<code>classList</code>的<code>add</code>方法添加一个类名，但是一次只能添加一个类名，否则会报错。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">	<span class="selector-class">.bgc</span> &#123;</span></span><br><span class="line"><span class="undefined">        width: 300px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: pink;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="css">	<span class="selector-class">.fonts</span>&#123;</span></span><br><span class="line"><span class="undefined">		font-size: 26px;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  	<span class="keyword">var</span> div=<span class="built_in">document</span>.querySelector(<span class="string">"div"</span>);</span></span><br><span class="line"><span class="javascript">  		<span class="comment">// 添加样式 只能单独添加</span></span></span><br><span class="line"><span class="javascript">  		div.classList.add(<span class="string">"bgc"</span>);	</span></span><br><span class="line"><span class="javascript">		div.classList.add(<span class="string">"fonts"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>2、移除类（<code>remove</code>）</strong></p>
+<blockquote>
+<p>移除类的时候，获取到元素之后，通过<code>classList</code>的<code>remove</code>方法移除一个类名。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">	<span class="selector-class">.bgc</span> &#123;</span></span><br><span class="line"><span class="undefined">        width: 300px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: pink;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="css">	<span class="selector-class">.fonts</span>&#123;</span></span><br><span class="line"><span class="undefined">		font-size: 26px;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgc fonts"</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  	<span class="keyword">var</span> div=<span class="built_in">document</span>.querySelector(<span class="string">"div"</span>);</span></span><br><span class="line"><span class="javascript">  		<span class="comment">// 移除样式 只能单独移除</span></span></span><br><span class="line"><span class="javascript">  		div.classList.remove(<span class="string">"bgc"</span>);	</span></span><br><span class="line"><span class="javascript">		div.classList.remove(<span class="string">"fonts"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>3、切换类（<code>toggle</code>）</strong></p>
+<blockquote>
+<p>当元素上没有某个类时，它就新增这个类；如果元素已经有了这个类，它就是删除它，就是切换操作。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">	<span class="selector-class">.bgc</span> &#123;</span></span><br><span class="line"><span class="undefined">        width: 300px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: pink;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgc"</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  	<span class="keyword">var</span> div=<span class="built_in">document</span>.querySelector(<span class="string">"div"</span>);</span></span><br><span class="line"><span class="javascript">  		<span class="comment">// 切换样式 因为元素已经有“bac”这个类名了，所以这里是移除的功能</span></span></span><br><span class="line"><span class="javascript">  		div.classList.toggle(<span class="string">"bgc"</span>);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>4、是否存在某个类（<code>contains</code>）</strong></p>
+<blockquote>
+<p>判断获取的元素中是否存在某个类名，返回值为<code>true</code>或者<code>false</code>。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">	<span class="selector-class">.bgc</span> &#123;</span></span><br><span class="line"><span class="undefined">        width: 300px;</span></span><br><span class="line"><span class="undefined">        height: 300px;</span></span><br><span class="line"><span class="undefined">        background-color: pink;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"bgc"</span>&gt;</span>文字<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">  	<span class="keyword">var</span> div=<span class="built_in">document</span>.querySelector(<span class="string">"div"</span>);</span></span><br><span class="line"><span class="javascript">  		<span class="comment">// 判断元素是否拥有某个类名</span></span></span><br><span class="line"><span class="javascript">  		div.classList.contains(<span class="string">"bgc"</span>);    <span class="comment">// true</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="7-3-自定义属性"><a class="header-anchor" href="#7-3-自定义属性"></a>7.3 自定义属性</h3>
+<blockquote>
+<p><code>HTML5</code>规定可以为元素添加非标准的属性，但要添加前缀<code>data-</code>，目的是为元素提供与渲染无关的信息，或者提供语义信息。这些属性可以任意添加、随便命名，只要以<code>data-</code>开头。</p>
+</blockquote>
+<p>如：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">data-info</span>=<span class="string">"tags"</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>获取自定义属性（dataset[‘自定义属性名称’]）</strong></p>
+<blockquote>
+<p>通过<code>Node.dataset['info']</code> 我们便可以获取到自定义的属性值。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">data-info</span>=<span class="string">"describe"</span> <span class="attr">data-num</span>=<span class="string">"123"</span>&gt;</span>这是一段描述<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> tag = <span class="built_in">document</span>.querySelector(<span class="string">'p'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> data = tag.dataset;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(data);   <span class="comment">// 打印的是一个对象 DOMStringMap</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(data[<span class="string">'info'</span>]);  <span class="comment">// "describe"</span></span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(data[<span class="string">'num'</span>]);  <span class="comment">// "123"</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fw8wjv3qg0j309r033glg.jpg" alt="image"></p>
+<p><em><code>Node.dataset</code>是以对象形式存在的，当我们为同一个<code>DOM</code>节点指定了多个自定义属性时，<code>Node.dataset</code>则以键值对的形式存储了所有的自定义属性的值。</em></p>
+<p><strong>设置自定义属性（dataset[‘自定义属性名称’]=“设定属性值”）</strong></p>
+<blockquote>
+<p>通过<code>过Node.dataset['info']=&quot;值&quot;</code> 我们便可以设置自定义的属性值。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">data-info</span>=<span class="string">"describe"</span> <span class="attr">data-num</span>=<span class="string">"123"</span>&gt;</span>这是一段描述<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> tag = <span class="built_in">document</span>.querySelector(<span class="string">'p'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> data = tag.dataset;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    data[<span class="string">'name'</span>] = <span class="string">"Ryan"</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(data);     <span class="comment">// 多了一个name属性</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>注意</strong></p>
+<blockquote>
+<p>当自定义属性中除了<code>data-</code>之外中间出现“<code>-</code>”连接符时，设置和获取的时候需要将属性名转成驼峰的格式才能正常的设置和获取。</p>
+</blockquote>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">p</span> <span class="attr">data-my-info</span>=<span class="string">"information"</span>&gt;</span>这是一段描述！<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> tag = <span class="built_in">document</span>.querySelector(<span class="string">'p'</span>);</span></span><br><span class="line"><span class="javascript">    <span class="keyword">var</span> data = tag.dataset;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">    data[<span class="string">'myInfo'</span>] = <span class="string">"info"</span>;</span></span><br><span class="line"><span class="javascript">    <span class="built_in">console</span>.log(data);     <span class="comment">// &#123;myInfo:"info"&#125;</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="8-网络状态"><a class="header-anchor" href="#8-网络状态"></a>8. 网络状态</h2>
+<blockquote>
+<p>我们可以通过<code>window.navigator.onLine</code>来检测，用户当前的网络状况，返回一个布尔值</p>
+</blockquote>
+<p>通过给<code>window</code>绑定监听事件，可以监测浏览器的一些状态信息</p>
+<ul>
+<li>网络从无到有时触发“<code>online</code>”方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'online'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// online是网络从无网到有网的 时候触发</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>网络从有到无时触发“<code>offline</code>”方法</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.addEventListener(<span class="string">'offline'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">// online是网络从有网到无网的时候触发</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="9-地理定位"><a class="header-anchor" href="#9-地理定位"></a>9. 地理定位</h2>
+<blockquote>
+<p>在<code>HTML</code>规范中，增加了获取用户地理信息的<code>API</code>，这样使得我们可以基于用户位置开发互联网应用，即基于位置服务 (<code>Location Base Service</code>)</p>
+</blockquote>
+<h3 id="9-1-获取地理信息方式"><a class="header-anchor" href="#9-1-获取地理信息方式"></a>9.1 获取地理信息方式</h3>
+<blockquote>
+<p>获取地理信息的方式一共有三种分别是：</p>
+</blockquote>
+<ul>
+<li><code>IP</code>地址</li>
+<li>三维坐标
+<ul>
+<li><code>GPS</code>（<code>Global Positioning System</code>，全球定位系统）</li>
+<li><code>Wi-Fi</code></li>
+<li>手机信号</li>
+</ul>
+</li>
+<li>用户自定义数据</li>
+</ul>
+<p><strong>如下表：</strong></p>
+<blockquote>
+<p>下表对不同获取方式的优缺点进行了比较，浏览器会自动以最优的方式去获取用户地理位置</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>数据源</th>
+<th>优点</th>
+<th>缺点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>IP</code> 地址</td>
+<td>任何地方都可以用，在服务器端处理</td>
+<td>不精确（经常出错，一般精确到城市级）运算代价大</td>
+</tr>
+<tr>
+<td><code>GPS</code></td>
+<td>很精确</td>
+<td>定位时间长，耗电量大；室内效果差；需要额外硬件设备支持</td>
+</tr>
+<tr>
+<td><code>Wi-Fi</code></td>
+<td>精确，可在室内使用，简单、快捷</td>
+<td>在乡村这些<code>Wi-Fi</code>接入点少的地区无法实现用</td>
+</tr>
+<tr>
+<td>手机信号</td>
+<td>相当准确，可在室内使用，简单、快捷</td>
+<td>需要能够访问手机或其 <code>modem</code> 设备</td>
+</tr>
+<tr>
+<td>用户自定义</td>
+<td>可获得比程序定位服务更准确的位置数据，用户自行输入可能比自动检测更快</td>
+<td>可能很不准确，特别是当用户位置变更后</td>
+</tr>
+</tbody>
+</table>
+<h3 id="9-2-隐私"><a class="header-anchor" href="#9-2-隐私"></a>9.2 隐私</h3>
+<blockquote>
+<p><code>HTML5 Geolocation</code>规范提供了一套保护用户隐私的机制。必须先得到用户明确许可，才能获取用户的位置信息。</p>
+</blockquote>
+<h3 id="9-3-使用地理定位"><a class="header-anchor" href="#9-3-使用地理定位"></a>9.3 使用地理定位</h3>
+<blockquote>
+<p>有两个方法都可以获取到当前的地理定位，只是功能上稍微有点区别。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">navigator.geolocation.getCurrentPosition(successCallback, errorCallback, options) <span class="comment">// 方法：获取当前地理信息</span></span><br><span class="line"></span><br><span class="line">navigator.geolocation.watchPosition(successCallback, errorCallback, options) <span class="comment">// 重复获取当前地理信息</span></span><br></pre></td></tr></table></figure>
+<p><strong>当成功获取地理信息后</strong></p>
+<blockquote>
+<p>会调用<code>succssCallback</code>，并返回一个包含位置信息的对象<code>position</code>。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">position.coords.latitude  <span class="comment">// 纬度</span></span><br><span class="line">position.coords.longitude <span class="comment">// 经度</span></span><br></pre></td></tr></table></figure>
+<p><strong>成功对象<code>position</code>：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxdcdew23vj30bk0a03z0.jpg" alt="image"></p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>coords.latitude</code></td>
+<td>十进制数的纬度</td>
+</tr>
+<tr>
+<td><code>coords.longitude</code></td>
+<td>十进制数的经度</td>
+</tr>
+<tr>
+<td><code>coords.accuracy</code></td>
+<td>位置精度</td>
+</tr>
+<tr>
+<td><code>coords.altitude</code></td>
+<td>海拔，海平面以上以米计</td>
+</tr>
+<tr>
+<td><code>coords.altitudeAccuracy</code></td>
+<td>位置的海拔精度</td>
+</tr>
+<tr>
+<td><code>coords.heading</code></td>
+<td>方向，从正北开始以度计</td>
+</tr>
+<tr>
+<td><code>coords.speed</code></td>
+<td>速度，以米/每秒计</td>
+</tr>
+<tr>
+<td><code>timestamp</code></td>
+<td>响应的日期/时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>当获取地理信息失败后</strong></p>
+<blockquote>
+<p>会调用<code>errorCallback</code>，并返回错误信息<code>error</code></p>
+</blockquote>
+<p>返回无符号的、简短的错误码，详见下表：</p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>相关联的常量</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>PERMISSION_DENIED</code></td>
+<td>用户不允许地理定位</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>POSITION_UNAVAILABLE</code></td>
+<td>无法获取当位置</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>TIMEOUT</code></td>
+<td>超时操作</td>
+</tr>
+</tbody>
+</table>
+<p><strong>示例代码：</strong></p>
+<blockquote>
+<p>获取当前位置的经纬度</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.navigator.geolocation.getCurrentPosition(<span class="function"><span class="keyword">function</span>(<span class="params">position</span>)</span>&#123;</span><br><span class="line">	<span class="comment">// 纬度</span></span><br><span class="line">	<span class="keyword">var</span> lat = position.coords.latitude;</span><br><span class="line">	<span class="comment">// 经度</span></span><br><span class="line">	<span class="keyword">var</span> long = position.coords.longitude;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">console</span>.log(<span class="string">'你当前的纬度为：'</span> + lat + <span class="string">'经度为：'</span> + long)</span><br><span class="line"></span><br><span class="line">&#125;,<span class="function"><span class="keyword">function</span>(<span class="params">err</span>)</span>&#123;  <span class="comment">// 错误时回调信息</span></span><br><span class="line">	<span class="keyword">if</span>(err.code == <span class="number">1</span>)&#123;</span><br><span class="line">		alert(<span class="string">'没有权限'</span>)</span><br><span class="line">	&#125;<span class="keyword">else</span> <span class="keyword">if</span>(err.code == <span class="number">2</span>)&#123;</span><br><span class="line">		alert(<span class="string">'内部错误'</span>);</span><br><span class="line">	&#125;<span class="keyword">else</span>&#123;</span><br><span class="line">		alert(<span class="string">'超时'</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;,&#123;</span><br><span class="line">	<span class="comment">// 超时设置</span></span><br><span class="line">	timeout: <span class="number">5000</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<h3 id="9-4-百度地图的用法"><a class="header-anchor" href="#9-4-百度地图的用法"></a>9.4 百度地图的用法</h3>
+<blockquote>
+<p>结合百度地图的API，我们可以使用它上面的一些功能，比如在地图上定位等等等…</p>
+</blockquote>
+<p><strong>进入百度地图开放平台官网：</strong></p>
+<blockquote>
+<p><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">网址：</a><a href="http://lbsyun.baidu.com/" target="_blank" rel="noopener">http://lbsyun.baidu.com/</a></p>
+</blockquote>
+<p>找到<code>Web</code>开发 -&gt; <code>javascript API</code></p>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxdd1q1o4vj31as0jfacc.jpg" alt="image"></p>
+<p><strong>直接找到示例<code>DEMO</code>，复制源代码，需要获取密钥 （自己申请，需要一到两个工作日）</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"initial-scale=1.0, user-scalable=no"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		body,</span></span><br><span class="line"><span class="undefined">		html,</span></span><br><span class="line"><span class="css">		<span class="selector-id">#allmap</span> &#123;</span></span><br><span class="line"><span class="undefined">			width: 100%;</span></span><br><span class="line"><span class="undefined">			height: 100%;</span></span><br><span class="line"><span class="undefined">			overflow: hidden;</span></span><br><span class="line"><span class="undefined">			margin: 0;</span></span><br><span class="line"><span class="undefined">			font-family: "微软雅黑";</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"你申请的秘钥"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>地图展示<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"allmap"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="comment">// 百度地图API功能</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"allmap"</span>); <span class="comment">// 创建Map实例</span></span></span><br><span class="line"><span class="javascript">	map.centerAndZoom(<span class="keyword">new</span> BMap.Point(<span class="number">116.404</span>, <span class="number">39.915</span>), <span class="number">11</span>); <span class="comment">// 初始化地图,设置中心点坐标和地图级别</span></span></span><br><span class="line"><span class="javascript">	map.addControl(<span class="keyword">new</span> BMap.MapTypeControl()); <span class="comment">//添加地图类型控件</span></span></span><br><span class="line"><span class="javascript">	map.setCurrentCity(<span class="string">"北京"</span>); <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></span></span><br><span class="line"><span class="javascript">	map.enableScrollWheelZoom(<span class="literal">true</span>); <span class="comment">//开启鼠标滚轮缩放</span></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>获取当前所在位置，设置到地图上</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">"Content-Type"</span> <span class="attr">content</span>=<span class="string">"text/html; charset=utf-8"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"initial-scale=1.0, user-scalable=no"</span> /&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="undefined">		body,</span></span><br><span class="line"><span class="undefined">		html,</span></span><br><span class="line"><span class="css">		<span class="selector-id">#allmap</span> &#123;</span></span><br><span class="line"><span class="undefined">			width: 100%;</span></span><br><span class="line"><span class="undefined">			height: 100%;</span></span><br><span class="line"><span class="undefined">			overflow: hidden;</span></span><br><span class="line"><span class="undefined">			margin: 0;</span></span><br><span class="line"><span class="undefined">			font-family: "微软雅黑";</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span> <span class="attr">src</span>=<span class="string">"你申请的秘钥"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>地图展示<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"allmap"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="built_in">window</span>.navigator.geolocation.getCurrentPosition(<span class="function"><span class="keyword">function</span> (<span class="params">pos</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 纬度</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> lat = pos.coords.latitude;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 经度</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> long = pos.coords.longitude;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">		<span class="built_in">console</span>.log(<span class="string">'你当前的纬度为：'</span> + lat + <span class="string">'经度为：'</span> + long)</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">		<span class="comment">// 百度地图API功能</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> map = <span class="keyword">new</span> BMap.Map(<span class="string">"allmap"</span>); <span class="comment">// 创建Map实例</span></span></span><br><span class="line"><span class="javascript">		map.centerAndZoom(<span class="keyword">new</span> BMap.Point(long, lat), <span class="number">15</span>); <span class="comment">// 初始化地图,设置中心点坐标和地图级别</span></span></span><br><span class="line"><span class="javascript">		map.addControl(<span class="keyword">new</span> BMap.MapTypeControl()); <span class="comment">//添加地图类型控件</span></span></span><br><span class="line"><span class="javascript">		map.setCurrentCity(<span class="string">"北京"</span>); <span class="comment">// 设置地图显示的城市 此项是必须设置的</span></span></span><br><span class="line"><span class="javascript">		map.enableScrollWheelZoom(<span class="literal">true</span>); <span class="comment">//开启鼠标滚轮缩放</span></span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">	&#125;, <span class="function"><span class="keyword">function</span> (<span class="params">err</span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="keyword">if</span> (err.code == <span class="number">1</span>) &#123;</span></span><br><span class="line"><span class="javascript">			alert(<span class="string">'没有权限'</span>)</span></span><br><span class="line"><span class="javascript">		&#125; <span class="keyword">else</span> <span class="keyword">if</span> (err.code == <span class="number">2</span>) &#123;</span></span><br><span class="line"><span class="javascript">			alert(<span class="string">'内部错误'</span>);</span></span><br><span class="line"><span class="javascript">		&#125; <span class="keyword">else</span> &#123;</span></span><br><span class="line"><span class="javascript">			alert(<span class="string">'超时'</span>)</span></span><br><span class="line"><span class="undefined">		&#125;</span></span><br><span class="line"><span class="undefined">	&#125;, &#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 超时设置</span></span></span><br><span class="line"><span class="undefined">		timeout: 5000</span></span><br><span class="line"><span class="undefined">	&#125;);</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果图：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxde2i3zbgj30wa0j5gun.jpg" alt="image"></p>
+<h2 id="10-web-存储"><a class="header-anchor" href="#10-web-存储"></a>10. WEB 存储</h2>
+<blockquote>
+<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，传统方式我们以<code>document.cookie</code>来进行存储的，但是由于其存储大小只有<code>4k</code>左右，并且解析也相当的复杂，每一次发送请求都会携带上<code>cookie</code>，会造成带宽的浪费，给开发带来诸多不便，<code>HTML5</code>规范则提出解决方案。<code>web</code>存储的含义是将数据存储到用户的电脑上，这样可以缓解服务器的压力，并且提高体验。</p>
+</blockquote>
+<h3 id="10-1-特性"><a class="header-anchor" href="#10-1-特性"></a>10.1 特性</h3>
+<ul>
+<li>设置、读取方便</li>
+<li>容量较大，<code>sessionStorage</code>约<code>5M</code>，<code>localStorage</code>约<code>20M</code></li>
+<li>只能存储字符串，可以将对象<code>JSON.stringify()</code>转成字符串后存储</li>
+</ul>
+<h3 id="10-2-方法详解"><a class="header-anchor" href="#10-2-方法详解"></a>10.2 方法详解</h3>
+<ul>
+<li><code>setItem(key, value)</code>设置存储内容</li>
+<li><code>getItem(key)</code>读取存储内容</li>
+<li><code>removeItem(key)</code>删除键值为<code>key</code>的存储内容</li>
+<li><code>clear()</code>清空所有存储内容</li>
+<li><code>key(n)</code>以索引值来获取键名</li>
+<li><code>length</code>存储的数据的个数</li>
+</ul>
+<p><strong>示例代码：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 在本地存储了一个键为：username 值为 Ryan's 的这个一个对象</span></span><br><span class="line"><span class="comment">// 在chrome的控制台的application里面的Storage可以查看</span></span><br><span class="line"><span class="built_in">window</span>.localStorage.setItem(<span class="string">'username1'</span>,<span class="string">"Ryan's"</span>);</span><br><span class="line"><span class="built_in">window</span>.localStorage.setItem(<span class="string">'username2'</span>,<span class="string">"Levi's"</span>);</span><br><span class="line"></span><br><span class="line"><span class="built_in">window</span>.sessionStorage.setItem(<span class="string">'username1'</span>,<span class="string">"Ryan's"</span>);</span><br><span class="line"><span class="built_in">window</span>.sessionStorage.setItem(<span class="string">'username2'</span>,<span class="string">"Levi's"</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 索引键的名字</span></span><br><span class="line">alert(<span class="built_in">window</span>.localStorage.key(<span class="number">0</span>));</span><br><span class="line">alert(<span class="built_in">window</span>.sessionStorage.key(<span class="number">0</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取数据 </span></span><br><span class="line">alert(<span class="built_in">window</span>.localStorage.getItem(<span class="string">'username1'</span>));</span><br><span class="line">alert(<span class="built_in">window</span>.sessionStorage.getItem(<span class="string">'username1'</span>));</span><br><span class="line"></span><br><span class="line"><span class="comment">// 获取本地数据的长度</span></span><br><span class="line">alert(<span class="built_in">window</span>.localStorage.length);</span><br><span class="line">alert(<span class="built_in">window</span>.sessionStorage.length);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 删除数据</span></span><br><span class="line"><span class="built_in">window</span>.localStorage.removeItem(<span class="string">'username1'</span>);</span><br><span class="line"><span class="built_in">window</span>.sessionStorage.removeItem(<span class="string">'username1'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// 清空所有的数据</span></span><br><span class="line"><span class="built_in">window</span>.localStorage.clear();</span><br><span class="line"><span class="built_in">window</span>.sessionStorage.clear();</span><br></pre></td></tr></table></figure>
+<h3 id="10-3-sessionstorage"><a class="header-anchor" href="#10-3-sessionstorage"></a>10.3 sessionStorage</h3>
+<p><strong>特点：</strong></p>
+<ul>
+<li>生命周期为关闭当前页面窗口</li>
+<li>不能多窗口下数据共享（同源策略）</li>
+<li>通过跳转可以解决，页面跳转的时候可以通过<code>session</code>实现数据共享</li>
+</ul>
+<h3 id="10-4-localstorage"><a class="header-anchor" href="#10-4-localstorage"></a>10.4 localStorage</h3>
+<p><strong>特点：</strong></p>
+<ul>
+<li>生命周期为永久有效，除非手动删除或用代码删除</li>
+<li>可以多窗口共享（同源策略）</li>
+<li>一些不涉及到安全的一些数据（不要太过庞大）都可以存储到本地</li>
+</ul>
+<p><strong>示例代码：</strong></p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">window</span>.localStorage.setItem(<span class="string">'age'</span>,<span class="number">18</span>)</span><br></pre></td></tr></table></figure>
+<p><strong>效果图：</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxdm5gt1kqj30e30csdg0.jpg" alt="image"></p>
+<h3 id="10-5-差异性"><a class="header-anchor" href="#10-5-差异性"></a>10.5 差异性</h3>
+<blockquote>
+<p>比较<code>cookie</code>，<code>session</code>，<code>local</code>三者之间的相同点和不同点</p>
+</blockquote>
+<p><strong>相同点：</strong></p>
+<ul>
+<li>都是存储数据，存储在web端，并且都是同源</li>
+</ul>
+<p><strong>不同点：</strong></p>
+<ul>
+<li>（1）<code>cookie</code>只有<code>4K</code>大小 并且每一次请求都会带上<code>cookie</code>体验不好，浪费带宽</li>
+<li>（2）<code>session</code>和<code>local</code>直接存储在本地，请求不会携带，并且容量比<code>cookie</code>要大的多</li>
+<li>（3）<code>session</code>是临时会话，当窗口被关闭的时候就清除掉 ，而<code>local</code>永久存在，<code>cookie</code>有过期时间</li>
+<li>（4）<code>cookie</code>和<code>local</code>都可以支持多窗口共享，而<code>session</code>不支持多窗口共享 但是都支持<code>a</code>链接跳转的新窗口</li>
+</ul>
+<h2 id="11-文件读取"><a class="header-anchor" href="#11-文件读取"></a>11. 文件读取</h2>
+<blockquote>
+<p>通过<code>FileReader</code>对象我们可以读取本地存储的文件，可以使用<code>File</code>对象来指定所要读取的文件或数据。其中<code>File</code>对象可以是来自用户在一个<code>&lt;input&gt;</code>元素上选择文件后返回的<code>FileList</code>对象，也可以来自由拖放操作生成的<code>DataTransfer</code>。</p>
+</blockquote>
+<p><strong>1、FileList 对象</strong></p>
+<blockquote>
+<p>由于<code>HTML5</code>中我们可以通过为表单元素添加<code>multiple</code>属性，因此我们通过<code>&lt;input&gt;</code>上传文件后得到的是一个<code>FileList</code>对象（伪数组形式）。</p>
+</blockquote>
+<p><strong>2、FileReader 对象</strong></p>
+<blockquote>
+<p><code>HTML5</code>新增内建对象，可以读取本地文件内容。<code>var reader = new FileReader;</code>可以实例化一个对象。</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> data = file.files[<span class="number">0</span>];</span><br><span class="line"><span class="comment">// 创建一个读取对象</span></span><br><span class="line"><span class="keyword">var</span> fr = <span class="keyword">new</span> FileReader();</span><br><span class="line"><span class="comment">// 读取文件</span></span><br><span class="line"></span><br><span class="line">fr.readAsDataURL(data);</span><br></pre></td></tr></table></figure>
+<p><em><code>readAsDataURL()</code>以<code>DataURL</code>形式读取文件</em></p>
+<p><strong>3、事件监听</strong></p>
+<blockquote>
+<p><code>onload</code>当文读取完成时调用</p>
+</blockquote>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fr.addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="comment">//获取读取的结果  </span></span><br><span class="line">	<span class="comment">//result属性里面存储的就是读取文件的结果</span></span><br><span class="line">	<span class="keyword">var</span> result = fr.result;	</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p><strong>完整代码：</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">input</span> <span class="attr">type</span>=<span class="string">"file"</span> <span class="attr">multiple</span> <span class="attr">name</span>=<span class="string">""</span> <span class="attr">id</span>=<span class="string">""</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">button</span>&gt;</span>点击读取文件<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> btn = <span class="built_in">document</span>.querySelector(<span class="string">'button'</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> file = <span class="built_in">document</span>.querySelector(<span class="string">'input[type="file"]'</span>);</span></span><br><span class="line"><span class="javascript"><span class="keyword">var</span> fr = [];</span></span><br><span class="line"><span class="javascript">btn.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;		</span></span><br><span class="line"><span class="javascript">	<span class="comment">// 读取文件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; file.files.length; i++)&#123;</span></span><br><span class="line"><span class="javascript">		fr[i] = <span class="keyword">new</span> FileReader();</span></span><br><span class="line"><span class="undefined">		fr[i].readAsDataURL(file.files[i]);</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="javascript">	<span class="comment">// fr.readAsDataURL(data);</span></span></span><br><span class="line"><span class="javascript">	<span class="comment">// 读取文件是一个耗时的操作，所以需要用事件监听读取完毕，</span></span></span><br><span class="line"><span class="javascript">	<span class="comment">// load事件是文件读取完毕之后触发的事件</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; fr.length; j++)&#123;</span></span><br><span class="line"><span class="javascript">		fr[j].addEventListener(<span class="string">'load'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">			<span class="comment">//获取读取的结果  </span></span></span><br><span class="line"><span class="javascript">			<span class="comment">//result属性里面存储的就是读取文件的结果</span></span></span><br><span class="line"><span class="javascript">			<span class="built_in">console</span>.log(fr);</span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> result = <span class="keyword">this</span>.result;	</span></span><br><span class="line"><span class="javascript">			<span class="comment">// 创建图片对象</span></span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>);</span></span><br><span class="line"><span class="undefined">			img.src = result;</span></span><br><span class="line"><span class="javascript">			<span class="built_in">document</span>.body.appendChild(img); </span></span><br><span class="line"><span class="undefined">		&#125;)</span></span><br><span class="line"><span class="undefined">	&#125;	</span></span><br><span class="line"><span class="undefined">&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="12-拖拽"><a class="header-anchor" href="#12-拖拽"></a>12. 拖拽</h2>
+<blockquote>
+<p>在<code>HTML5</code>的规范中，我们可以通过为元素增加<code>draggable=&quot;true&quot;</code>来设置此元素是否可以进行拖拽操作，其中图片、链接默认是开启的。</p>
+</blockquote>
+<p><strong>1、拖拽元素</strong></p>
+<blockquote>
+<p>页面中设置了<code>draggable=&quot;true&quot;</code>属性的元素，可以被拖拽，其中<code>&lt;img&gt;</code>、<code>&lt;a&gt;</code>标签默认是可以被拖拽的。</p>
+</blockquote>
+<p><em>2、目标元素</em>*</p>
+<blockquote>
+<p>页面中任何一个元素都可以成为目标元素。</p>
+</blockquote>
+<p><strong>3、事件监听</strong></p>
+<blockquote>
+<p>根据元素类型的不同，需要设置不同的事件监听：</p>
+</blockquote>
+<p>（1）、拖拽元素</p>
+<ul>
+<li><code>ondrag</code> 		应用于拖拽元素，整个拖拽过程都会调用<br>
+<code>ondragstart</code>	应用于拖拽元素，当拖拽开始时调用<br>
+<code>ondragend</code>	应用于拖拽元素，当拖拽结束时调用</li>
+</ul>
+<p>（2）、目标元素</p>
+<ul>
+<li><code>ondragenter</code>	应用于目标元素，当拖拽元素进入时调用<br>
+<code>ondragleav</code>	应用于目标元素，当鼠标离开目标元素时调用<br>
+<code>ondragver</code>	应用于目标元素，当停留在目标元素上时调用<br>
+<code>ondrop</code>		应用于目标元素，当在目标元素上松开鼠标时调用</li>
+</ul>
+<p><strong>示例代码：</strong> 将图片拖拽到浏览器内显示在<code>div</code>内</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="css">	<span class="selector-class">.info</span> &#123;</span></span><br><span class="line"><span class="undefined">		width: 500px;</span></span><br><span class="line"><span class="undefined">		height: 500px;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">border</span>: 1<span class="selector-tag">px</span> <span class="selector-tag">solid</span> <span class="selector-id">#000</span>;</span></span><br><span class="line"><span class="undefined">		position: absolute;</span></span><br><span class="line"><span class="undefined">		left: 50%;</span></span><br><span class="line"><span class="undefined">		top: 50%;</span></span><br><span class="line"><span class="undefined">		line-height: 500px;</span></span><br><span class="line"><span class="undefined">		text-align: center;</span></span><br><span class="line"><span class="css">		<span class="selector-tag">transform</span><span class="selector-pseudo">:translate(-50</span>%,<span class="selector-tag">-50</span>%);</span></span><br><span class="line"><span class="css">		<span class="selector-tag">box-shadow</span>: 0 0 10<span class="selector-tag">px</span> 2<span class="selector-tag">px</span> <span class="selector-tag">rgba</span>(0,0,0,<span class="selector-class">.5</span>); </span></span><br><span class="line"><span class="undefined">		border-radius: 5px;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="css">	<span class="selector-class">.info</span> <span class="selector-tag">img</span> &#123;</span></span><br><span class="line"><span class="undefined">		width: 100%;</span></span><br><span class="line"><span class="undefined">		height: 100%;</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line">	</span><br><span class="line"><span class="comment">&lt;!-- 目标元素 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"info"</span>&gt;</span>将图片拖拽至此<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">	</span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> info = <span class="built_in">document</span>.querySelector(<span class="string">'.info'</span>);</span></span><br><span class="line"><span class="javascript">	<span class="comment">// 获取html元素</span></span></span><br><span class="line"><span class="javascript">	<span class="keyword">var</span> oHtml = <span class="built_in">document</span>.documentElement;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">	<span class="comment">// 问题：浏览器默认会将外部拖拽的文件直接打开，我们需要阻止掉</span></span></span><br><span class="line"><span class="javascript">	<span class="comment">// 将外部文件拖拽进浏览器里面松开鼠标的时候其实就是在html页面上触发了drop事件，我们只需要在drop事件的时候阻止默认事件</span></span></span><br><span class="line"><span class="javascript">	oHtml.ondrop = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 阻止默认事件</span></span></span><br><span class="line"><span class="undefined">		e.preventDefault();</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="javascript">	<span class="comment">/*drop事件默认是被阻止的，所以还需要在dragover的时候阻止默认事件*/</span></span></span><br><span class="line"><span class="javascript">	oHtml.ondragover = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="undefined">		e.preventDefault();</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span></span><br><span class="line"><span class="javascript">	info.ondrop = <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		<span class="comment">// 获取外部拖拽进来的文件</span></span></span><br><span class="line"><span class="javascript">		<span class="comment">// console.log(e);</span></span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> data = e.dataTransfer.files[<span class="number">0</span>];		</span></span><br><span class="line"><span class="javascript">		<span class="keyword">var</span> fr = <span class="keyword">new</span> FileReader();</span></span><br><span class="line"><span class="undefined">		fr.readAsDataURL(data);</span></span><br><span class="line"><span class="javascript">		fr.addEventListener(<span class="string">'load'</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> result = fr.result;</span></span><br><span class="line"><span class="javascript">			<span class="keyword">var</span> img = <span class="built_in">document</span>.createElement(<span class="string">'img'</span>);</span></span><br><span class="line"><span class="undefined">			img.src = result;</span></span><br><span class="line"><span class="javascript">			info.innerHTML = <span class="string">''</span>;</span></span><br><span class="line"><span class="undefined">			info.appendChild(img);</span></span><br><span class="line"><span class="undefined">		&#125;)</span></span><br><span class="line"><span class="undefined">	&#125;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>效果图</strong></p>
+<p><img src="http://ww1.sinaimg.cn/large/007kscFEgy1fxfxo8xc91g30j20e7wh5.gif" alt="image"></p>
+</div><div class="toc-article" id="toc"><div class="toc-title"></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-认识html5"><span class="toc-text">1. 认识HTML5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-语法规范"><span class="toc-text">2. 语法规范</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-语义化标签"><span class="toc-text">3. 语义化标签</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-html5-浏览器支持"><span class="toc-text">4. HTML5 浏览器支持</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-表单"><span class="toc-text">5. 表单</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#5-1-表单控件"><span class="toc-text">5.1 表单控件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-2-表单元素"><span class="toc-text">5.2 表单元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-3-表单属性"><span class="toc-text">5.3 表单属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-4-表单事件"><span class="toc-text">5.4 表单事件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-5-表单样式"><span class="toc-text">5.5 表单样式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-多媒体标签"><span class="toc-text">6. 多媒体标签</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#6-1-音频"><span class="toc-text">6.1 音频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-2-视频"><span class="toc-text">6.2 视频</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-3-音频-视频方法"><span class="toc-text">6.3 音频/视频方法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-dom-扩展"><span class="toc-text">7. DOM 扩展</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#7-1-获取元素"><span class="toc-text">7.1 获取元素</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-2-类名操作"><span class="toc-text">7.2 类名操作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-3-自定义属性"><span class="toc-text">7.3 自定义属性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-网络状态"><span class="toc-text">8. 网络状态</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-地理定位"><span class="toc-text">9. 地理定位</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#9-1-获取地理信息方式"><span class="toc-text">9.1 获取地理信息方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-2-隐私"><span class="toc-text">9.2 隐私</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-3-使用地理定位"><span class="toc-text">9.3 使用地理定位</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-4-百度地图的用法"><span class="toc-text">9.4 百度地图的用法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-web-存储"><span class="toc-text">10. WEB 存储</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#10-1-特性"><span class="toc-text">10.1 特性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-2-方法详解"><span class="toc-text">10.2 方法详解</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-3-sessionstorage"><span class="toc-text">10.3 sessionStorage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-4-localstorage"><span class="toc-text">10.4 localStorage</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-5-差异性"><span class="toc-text">10.5 差异性</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-文件读取"><span class="toc-text">11. 文件读取</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-拖拽"><span class="toc-text">12. 拖拽</span></a></li></ol></div><p class="ending">本篇完</p><div class="tags"><a class="tag-link" href="/tags/WEB存储/">WEB存储</a><a class="tag-link" href="/tags/地理定位/">地理定位</a><a class="tag-link" href="/tags/拖拽/">拖拽</a><a class="tag-link" href="/tags/文件读取/">文件读取</a><a class="tag-link" href="/tags/语义化标签/">语义化标签</a><a class="tag-link" href="/tags/音频-视频方法/">音频/视频方法</a></div></section></div><div id="articleMenu"><i class="fa fa-list iconColor"></i></div><div class="container"><ul class="nav"><li>上一篇：<a href="/2018/11/22/CSS3-入门详解/">CSS3 入门详解</a></li><li>下一篇：<a href="/2018/09/12/JS-基础知识-DOM篇/">JS 基础知识-DOM篇</a></li></ul></div><div id="backToTop"><div class="back-arrow back-arrow-left"></div><div class="back-arrow back-arrow-right"></div></div><footer class="container"><div class="rights"><span>© 2018 </span><i class="fa fa-heartbeat iconColor"> </i><span>Ryan </span></div></footer><canvas id="canvas"></canvas><script src="/script/jquery.min.js"></script><link rel="stylesheet" href="/fancybox/jquery.fancybox.css"><script src="/fancybox/jquery.fancybox.pack.js"></script><script src="/script/index.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-61220413-1', 'auto');
+ga('send', 'pageview');</script><script src="/script/post.js"></script></head></html>

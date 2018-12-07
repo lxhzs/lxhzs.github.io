@@ -1,0 +1,188 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="description"><meta name="keyword"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta http-equiv="X-UA-Compatible" content="IE=edge"><title>CSS基本用法</title><link rel="shortcut icon" href="/images/avatar.jpg" type="image/x-icon"><link href="/styles/site.css" rel="stylesheet"><link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css?version=1.5.6"><body></body><header class="container" id="header"><div class="header"><div class="header-left"><div class="avatar"><img src="/images/avatar.jpg"></div><div class="author"><div class="author-name"><a href="/">Ryan's Blog</a></div><div class="about-me">大家好，我叫李新华。我的域名是“李新华真帅”。</div></div></div><div class="header-right"><ul class="navigation"><li><a href="/"><i class="fa fa-fw fa-home"> </i><br>首页</a></li><li><a href="/"><i class="fa fa-fw fa-book"> </i><br>博客</a></li><li><a href="/archives"><i class="fa fa-fw fa-archive"> </i><br>归档</a></li><li><a href="/categories"><i class="fa fa-fw fa-th"> </i><br>分类</a></li><li><a href="/tags"><i class="fa fa-fw fa-tags"> </i><br>标签</a></li><li><a href="/life"><i class="fa fa-fw fa-heart"> </i><br>生活</a></li><li><a href="/about"><i class="fa fa-fw fa-user"> </i><br>关于</a></li></ul></div><div class="about-me-mask"><div class="about-me-wrap"><div class="about-me__header"><div class="avatar"><img src="/images/avatar.jpg"></div></div><ul class="socials"><li class="social-item"><span class="label"><img src="/images/socials/github.svg" alt="https://github.com/gary-Shen"></span><a href="https://github.com/gary-Shen" target="_blank" title="https://github.com/gary-Shen">https://github.com/gary-Shen</a></li><li class="social-item"><span class="label"><img src="/images/socials/email.svg" alt="guanlinshen@126.com"></span><span>guanlinshen@126.com</span></li><li class="social-item"><span class="label"><img src="/images/socials/wechat.svg" alt="Grinson"></span><span>Grinson</span></li></ul></div></div></div></header><div class="container post"><section class="article"><div class="title">CSS基本用法</div><div class="date">写于2016年06月17日</div><div class="content"><h2 id="css基础"><a class="header-anchor" href="#css基础"></a>CSS基础</h2>
+<h3 id="1-标签的基本使用"><a class="header-anchor" href="#1-标签的基本使用"></a>1.标签的基本使用</h3>
+<ul>
+<li><code>text-decoration</code>  <code>a</code> 标签下划线
+<ul>
+<li><code>underline</code> 下划线</li>
+<li><code>line-through</code>  删除线</li>
+<li><code>none</code> 清除默认下划线</li>
+</ul>
+</li>
+</ul>
+<h3 id="a标签的伪类"><a class="header-anchor" href="#a标签的伪类"></a>a标签的伪类</h3>
+<ul>
+<li><code>a:link</code>{属性:值;}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超链接默认状态   a&#123;属性:值;&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>a:visited</code>{属性:值;}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超链接访问之后的状态</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>a:hover</code>{属性:值;}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">鼠标悬停超链接状态</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>a:active</code>{属性:值;}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">鼠标激活的状态(鼠标按住不松手)</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>a:focus</code>{属性:值;}</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">获取光标焦点</span><br></pre></td></tr></table></figure>
+<h3 id="3-块级元素和行内元素水平居中的方式"><a class="header-anchor" href="#3-块级元素和行内元素水平居中的方式"></a>3.块级元素和行内元素水平居中的方式</h3>
+<ul>
+<li><code>margin: 0 auto</code> 块元素居中对齐</li>
+<li><code>text-align:center</code>让块元素和行内块元素里边的内容水平居中</li>
+</ul>
+<h3 id="4-border-边框线型"><a class="header-anchor" href="#4-border-边框线型"></a>4.border 边框线型</h3>
+<ul>
+<li><code>solid</code>;  实线</li>
+<li><code>dashed</code>; 虚线</li>
+<li><code>dotted</code>;  点线</li>
+</ul>
+<a id="more"></a>
+<h3 id="5-盒子模型外边距-margin"><a class="header-anchor" href="#5-盒子模型外边距-margin"></a>5.盒子模型外边距 margin</h3>
+<ul>
+<li>外边距合并</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">上下两个盒子，上面的盒子设置margin-bottom:100px;下面的盒子设置margin-top:50px; 会触发外边距合并，两者的距离按长的算</span><br></pre></td></tr></table></figure>
+<ul>
+<li>外边距塌陷</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给子盒子设置margin-top的时候，会带动父盒子一起下来。</span><br></pre></td></tr></table></figure>
+<h3 id="6-解决外边塌陷的方法"><a class="header-anchor" href="#6-解决外边塌陷的方法"></a>6.解决外边塌陷的方法</h3>
+<ul>
+<li>给父盒子设置边框</li>
+<li>给父盒子设置<code>overflow:hidden</code>;</li>
+</ul>
+<h3 id="7-表格边框合并"><a class="header-anchor" href="#7-表格边框合并"></a>7.表格边框合并</h3>
+<ul>
+<li><code>border-collapse: collapse</code>;</li>
+</ul>
+<h3 id="8-表单input的默认样式"><a class="header-anchor" href="#8-表单input的默认样式"></a>8.表单input的默认样式</h3>
+<ul>
+<li>去掉边框</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">border：0 none;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>去掉轮廓线</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">outline-style:none;</span><br></pre></td></tr></table></figure>
+<h3 id="9-浮动-float"><a class="header-anchor" href="#9-浮动-float"></a>9.浮动 float</h3>
+<ul>
+<li>浮动的特点
+<ul>
+<li>浮动元素会脱离标准流，不占据原来的位置。</li>
+<li>浮动元素会在一行上显示。</li>
+<li>浮动元素，即使代码换行，中间没有空隙。</li>
+<li>浮动元素，不设置宽高，默认宽高为<code>0</code>，宽高是内容撑开的宽高。</li>
+<li>浮动元素只影响后边的元素，不影响前边的元素。</li>
+<li>浮动元素顶对齐。</li>
+<li>浮动可以将行内元素转换成行内块元素显示模式(不推荐使用，转行内块推荐使用<code>display:inline-block;</code>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="10-文本饶图"><a class="header-anchor" href="#10-文本饶图"></a>10.文本饶图</h3>
+<ul>
+<li>文本不参与浮动</li>
+<li>图片给他一个浮动</li>
+</ul>
+<h3 id="11-清除浮动"><a class="header-anchor" href="#11-清除浮动"></a>11.清除浮动</h3>
+<ul>
+<li>给父元素设置高度</li>
+<li>额外便签法
+<ul>
+<li>给最后一个浮动元素之后，添加额外标签，给这个标签使用<code>clear:both</code>;</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"left"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"right"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- 额外标签法 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">style</span>=<span class="string">"clear: both;"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>
+<p>给浮动元素的父元素使用<code>overflow:hidden;</code> 触发<code>bfc</code></p>
+</li>
+<li>
+<p>单伪元素清除浮动</p>
+<ul>
+<li>给浮动元素父元素使用伪元素清除浮动</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">visibility</span>: hidden;   <span class="comment">/*将显示模式设置为隐藏*/</span></span><br><span class="line">	<span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>双伪元素清除浮动</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:before</span>,<span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">display</span>: block;</span><br><span class="line">	<span class="attribute">content</span>:<span class="string">""</span>;</span><br><span class="line">	<span class="attribute">height</span>: <span class="number">0</span>;</span><br><span class="line">	<span class="attribute">line-height</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.clearfix</span><span class="selector-pseudo">:after</span>&#123;</span><br><span class="line">	<span class="attribute">clear</span>: both;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="12-定位-position"><a class="header-anchor" href="#12-定位-position"></a>12.定位 position</h3>
+<ul>
+<li>
+<p><strong>静态定位 static</strong></p>
+</li>
+<li>
+<p><strong>绝对定位 absolute</strong></p>
+<ul>
+<li>绝对定位的元素会脱离标准流，不占据原来的位置</li>
+<li>绝对定位的元素，位置基于浏览器偏移。</li>
+<li>嵌套的盒子，父元素没有使用定位，子元素使用绝对定位的位置基于浏览器偏移。</li>
+<li>嵌套的盒子，父元素使用绝对定位，子元素使用绝对定位，子元素位置基于父元素的位置偏移。</li>
+<li>行内元素使用绝对定位之后，显示模式转换成了行内块(不推荐使用，转行内块推荐使用<code>display:inline-block;</code>)</li>
+</ul>
+</li>
+<li>
+<p><strong>相对定位 relative</strong></p>
+<ul>
+<li>元素使用相对定位，不脱离标准流，还占据原来的位置。</li>
+<li>元素使用相对定位，位置基于自身的位置偏移。</li>
+<li>子绝父相，子元素绝对定位，父元素相对定位，子元素的位置基于父元素的位置偏移。</li>
+<li>相对定位不能实现行内元素转行内块元素。</li>
+</ul>
+</li>
+<li>
+<p><strong>固定定位 fixed</strong></p>
+<ul>
+<li>元素使用固定定位，位置基于浏览器偏移。</li>
+<li>元素使用固定定位，脱离了标准流，不占据原来的位置。</li>
+<li>可以将行内元素转换为行内块显示模式(不推荐使用，转行内块元素，推荐使用<code>display:inline-block;</code>)</li>
+</ul>
+</li>
+</ul>
+<h3 id="13-定位的盒子水平居中显示"><a class="header-anchor" href="#13-定位的盒子水平居中显示"></a>13.定位的盒子水平居中显示</h3>
+<ul>
+<li>
+<p><code>margin: 0 auto;</code> 只能让标准流的块元素居中显示。</p>
+</li>
+<li>
+<p>首先使用<code>left:50%;</code>向走父盒子的一半，再是<code>margin-left</code>负值，向左走自身的一半，实现定位的盒子水平居中显示。</p>
+</li>
+<li>
+<p><code>css3</code>里的<code>transform translate</code>属性</p>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">position:absolute;</span><br><span class="line">top:50%;</span><br><span class="line">lrft:50%;</span><br><span class="line">transform:translate(-50%,-50%);</span><br></pre></td></tr></table></figure>
+<h3 id="14-vertical-align-属性"><a class="header-anchor" href="#14-vertical-align-属性"></a>14.vertical-align 属性</h3>
+<ul>
+<li><code>baseline;</code> 基线对齐  默认值</li>
+<li><code>top;</code>  顶线对齐</li>
+<li><code>middle;</code>中线对齐</li>
+<li><code>bottom;</code>底线</li>
+<li>对行内块元素敏感。行内块的元素对齐，可以使用<code>vertical-align</code></li>
+</ul>
+<h3 id="15-overflow-溢出处理"><a class="header-anchor" href="#15-overflow-溢出处理"></a>15.Overflow  溢出处理</h3>
+<ul>
+<li><code>visible;</code> 溢出显示   默认值</li>
+<li><code>hidden;</code>  溢出隐藏</li>
+<li><code>auto;</code>   内容溢出生成滚动条，不溢出不生成滚动条</li>
+<li><code>scroll;</code>  内容是否溢出都生成滚动条</li>
+</ul>
+<h3 id="16-透明度问题"><a class="header-anchor" href="#16-透明度问题"></a>16.透明度问题</h3>
+<ul>
+<li><code>Opacity</code>: 不透明度   范围<code>0-1</code>  改变元素所有内容的不透明度</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*高版本浏览器设置透明度*/</span></span><br><span class="line"><span class="selector-tag">opacity</span>: 0<span class="selector-class">.5</span>;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><code>filter:alpha(opacity=30)</code>; 兼容<code>ie6~9</code>的不透明度  <code>opactiy</code>范围从<code>0-100</code></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*低版本浏览器 opacity*/</span></span><br><span class="line">filter : alpha(opacity=50);</span><br></pre></td></tr></table></figure></div><div class="toc-article" id="toc"><div class="toc-title"></div><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#css基础"><span class="toc-text">CSS基础</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-标签的基本使用"><span class="toc-text">1.标签的基本使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a标签的伪类"><span class="toc-text">a标签的伪类</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-块级元素和行内元素水平居中的方式"><span class="toc-text">3.块级元素和行内元素水平居中的方式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-border-边框线型"><span class="toc-text">4.border 边框线型</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-盒子模型外边距-margin"><span class="toc-text">5.盒子模型外边距 margin</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-解决外边塌陷的方法"><span class="toc-text">6.解决外边塌陷的方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-表格边框合并"><span class="toc-text">7.表格边框合并</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-表单input的默认样式"><span class="toc-text">8.表单input的默认样式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-浮动-float"><span class="toc-text">9.浮动 float</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-文本饶图"><span class="toc-text">10.文本饶图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#11-清除浮动"><span class="toc-text">11.清除浮动</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#12-定位-position"><span class="toc-text">12.定位 position</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#13-定位的盒子水平居中显示"><span class="toc-text">13.定位的盒子水平居中显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#14-vertical-align-属性"><span class="toc-text">14.vertical-align 属性</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#15-overflow-溢出处理"><span class="toc-text">15.Overflow  溢出处理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#16-透明度问题"><span class="toc-text">16.透明度问题</span></a></li></ol></li></ol></div><p class="ending">本篇完</p><div class="tags"><a class="tag-link" href="/tags/文本绕图/">文本绕图</a><a class="tag-link" href="/tags/浮动/">浮动</a></div></section></div><div id="articleMenu"><i class="fa fa-list iconColor"></i></div><div class="container"><ul class="nav"><li>上一篇：<a href="/2016/07/12/常用正则表达式/">JS 常用正则表达式</a></li></ul></div><div id="backToTop"><div class="back-arrow back-arrow-left"></div><div class="back-arrow back-arrow-right"></div></div><footer class="container"><div class="rights"><span>© 2018 </span><i class="fa fa-heartbeat iconColor"> </i><span>Ryan </span></div></footer><canvas id="canvas"></canvas><script src="/script/jquery.min.js"></script><link rel="stylesheet" href="/fancybox/jquery.fancybox.css"><script src="/fancybox/jquery.fancybox.pack.js"></script><script src="/script/index.js"></script><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+ga('create', 'UA-61220413-1', 'auto');
+ga('send', 'pageview');</script><script src="/script/post.js"></script></head></html>
